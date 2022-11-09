@@ -1,0 +1,19 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String frase;
+		int total;
+		System.out.print("Introduce una frase: ");
+		frase=teclado.nextLine();
+		total=frase.length();
+		for(int contpar=1;contpar<total;contpar+=2) {
+			System.out.println("Las letras en las posiciones pares son: "+ frase.substring(contpar,contpar+1));
+		}
+		for(int contimp=0;contimp<total;contimp+=2) {
+			System.out.println("Las letras en las posiciones impares son: "+ frase.substring(contimp,contimp+1));
+		}
+	}	
+}

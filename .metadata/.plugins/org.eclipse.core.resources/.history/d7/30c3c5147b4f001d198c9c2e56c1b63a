@@ -1,0 +1,58 @@
+package actividadprogramacion;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+        int num;
+        boolean test = false;
+        double base=0;
+        double altura=0;
+        double lado=0;
+        double lado2=0;
+        double area=0;
+        System.out.println("1.Triangulo");
+        System.out.println("2.Cuadrado");
+        System.out.println("3.Rectangulo");
+        System.out.println("----------------------------");
+        System.out.print("Elige '1','2' o '3': ");
+        num=teclado.nextInt();
+        switch (num) {
+                case 1: 
+                    System.out.println("----------------------------");
+                    System.out.println("AREA DEL TRIANGULO");
+                    System.out.print("Introducir base: ");
+                    base=teclado.nextInt();
+                    System.out.print("Introducir altura: ");
+                    altura=teclado.nextInt();
+                    area=(base*altura)/2;
+                    break;
+                case 2: 
+                    System.out.println("----------------------------");
+                    System.out.println("AREA DEL CUADRADO");
+                    System.out.print("Introducir lado: ");
+                    lado=teclado.nextInt();
+                    area=lado*lado;
+                    break;
+                case 3: 
+                    System.out.println("----------------------------");
+                    System.out.println("AREA DEL RECTANGULO"); 
+                    System.out.print("Introducir lado: ");
+                    lado=teclado.nextInt();
+                    System.out.print("Introducir Otro lado: ");
+                    lado2=teclado.nextInt();
+                    area=lado*lado2;
+                    break;
+                default:
+                	System.out.println("No has introducido ninguno");
+                	test = true;
+            }
+        if (!test) {
+        	System.out.println("Su area es de " + area);
+		}	
+	}
+	
+	
+}

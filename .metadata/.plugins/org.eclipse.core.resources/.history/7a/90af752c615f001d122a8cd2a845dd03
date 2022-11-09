@@ -1,0 +1,33 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String frase;
+		int longitud;
+		char caracter;
+		int posicion=0;
+		String puestos="";
+		do {
+			System.out.print("Introduce una frase: ");
+			frase=teclado.nextLine();
+			longitud=frase.length();
+		}
+		while(longitud>60);
+		for(int cont=0;cont<longitud;cont++) {
+			int contB=0;
+			caracter=frase.charAt(cont);
+			while(posicion!=-1) {
+				contB=cont;
+				posicion=frase.indexOf(caracter,contB+1);
+				puestos+=posicion;
+				contB++;
+			}
+
+			System.out.println("El caracter " + puestos);
+		}
+		
+		
+	}	
+}

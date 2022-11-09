@@ -1,0 +1,17 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String codigo;
+		String fecha;
+		
+		do {
+			System.out.println("Introduzca un codigo: ");
+			codigo=teclado.nextLine();
+			System.out.println(codigo.substring(0,3));
+			
+		}while(!codigo.equals("00000000"));
+	}	
+}

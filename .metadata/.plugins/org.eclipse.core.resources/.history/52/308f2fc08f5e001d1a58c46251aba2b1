@@ -1,0 +1,23 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String frase;
+		int longitud;
+		char caracter;
+		do {
+			System.out.print("Introduce una frase: ");
+			frase=teclado.nextLine();
+			longitud=frase.length();
+		}
+		while(longitud>60);
+		for(int cont=0;cont<longitud;cont++) {
+			caracter=frase.charAt(cont);
+			System.out.println(caracter);
+		}
+		
+		
+	}	
+}

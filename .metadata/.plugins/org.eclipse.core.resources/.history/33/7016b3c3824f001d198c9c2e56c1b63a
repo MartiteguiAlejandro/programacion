@@ -1,0 +1,17 @@
+package actividadprogramacion;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+        Scanner teclado=new Scanner(System.in);
+        int num;
+        System.out.print("Introducir numero: ");
+        num=teclado.nextInt();
+        System.out.print(num + "negros de m");
+	}	
+}
+
+
+

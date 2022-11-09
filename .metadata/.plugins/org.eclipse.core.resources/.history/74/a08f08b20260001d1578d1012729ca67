@@ -1,0 +1,22 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String frase,cacho1,cacho2;
+		int longitud;
+		do {
+		System.out.println("Escribe una frase: ");
+		frase=teclado.nextLine();
+		longitud=frase.length();
+		}
+		while(longitud>60);
+		for(int i=0;i<longitud;i++) {
+			int x=longitud-i;
+			cacho1=frase.substring(0,x);
+			cacho2=frase.substring(x,longitud);
+			System.out.println(cacho2+cacho1);
+		}
+	}	
+}

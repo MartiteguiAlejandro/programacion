@@ -1,0 +1,30 @@
+package actividadprogramacion;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+        Scanner teclado=new Scanner(System.in);
+        //Declaration variables
+        int num1,num2;
+        int suma=0;
+        //Introduccion datos
+        System.out.print("Ingresa el primer numero:");
+        num1=teclado.nextInt();
+        System.out.print("Ingresa el segundo numero:");
+        num2=teclado.nextInt();
+        //Siempre que a sea menor o igual que b
+        if (num1<num2){
+            for (int contador=num1+1;contador<num2; contador++){
+                 suma=suma+contador;
+            }
+            System.out.print(suma);
+        }else {
+            System.out.print("ERROR.El primer numero ha de ser menor que el segundo.");
+        }
+	}	
+}
+	
+	
+

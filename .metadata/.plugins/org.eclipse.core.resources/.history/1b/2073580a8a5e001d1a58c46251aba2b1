@@ -1,0 +1,12 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		int num;
+		char letra='A';
+		num=letra;
+		System.out.print(num);
+	}	
+}

@@ -1,0 +1,81 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String codigo;
+		
+		char primer;
+		char segundo;
+		char tercero;
+		char cuarto;
+		char genero;
+		char curso;
+		int hprimero=0;
+		int hsegundo=0;
+		int mprimero=0;
+		int msegundo=0;
+		int contcodigos=0;
+		
+		do {
+			System.out.println("Introduzca un codigo: ");
+			codigo=teclado.nextLine();
+			primer=codigo.charAt(0);
+			if(primer=='1') {
+				System.out.print("UNO");
+				segundo=codigo.charAt(1);
+				if(segundo=='9') {
+					System.out.print("DOS");
+					tercero=codigo.charAt(2);
+					if(tercero=='9') {
+						System.out.print("TRES");
+						cuarto=codigo.charAt(3);
+						if(cuarto>='0' && cuarto<='5') {
+							System.out.print("CUATRO");
+							genero=codigo.charAt(4);
+							if(genero=='H' || genero=='M' ){
+								System.out.print("CINCO");
+								curso=codigo.charAt(5);
+								if(curso=='1') {
+									System.out.print("SEIS primero");
+									if(curso=='H') {
+										System.out.print("SEIS pHOMBRE");
+										hprimero++;
+									}else if(curso=='M') {
+										System.out.print("sesis pmujer");
+										mprimero++;
+									}
+								}else if(curso=='2') {
+									System.out.print("SEIS segundo");
+									if(curso=='H') {
+										System.out.print("SEIS sHOMBRE");
+										hsegundo++;
+									}else if(curso=='M') {
+										System.out.print("sesis smujer");
+										msegundo++;
+									
+								} else {
+									System.out.print("El curso debe ser 1 o 2");
+								}
+							}
+							
+					
+						}
+						
+					}else {
+						System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+					}
+				}else {
+					System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+				}
+			}else {
+				System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+			}
+			
+		}
+			contcodigos++;
+		}while(!codigo.equals("00000000"));
+		System.out.print("Hay " + hprimero + " hombres en primero, " + hsegundo + " hombres en segundo, " + mprimero + " mujeres en primero y"+ msegundo + " mujeres en segundo. Se han registrado" + (contcodigos-1) + " codigos.");
+	}	
+}

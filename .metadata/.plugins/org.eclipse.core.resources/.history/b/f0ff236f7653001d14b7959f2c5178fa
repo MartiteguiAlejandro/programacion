@@ -1,0 +1,28 @@
+package pruebaseclipse;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner (System.in);
+		int num;
+		int cont=0;
+		int sumpar=0;
+		int sumimp=0;
+		do{
+			System.out.print("Introduce un numero: ");
+			num=teclado.nextInt();
+			if (cont%2==0) {
+				sumpar=sumpar + num;
+			}
+			else {
+				sumimp=sumimp + num; 
+			}
+			cont++;
+		}
+		while(num!=0);
+		System.out.print("La suma de los numeros en posicion par introducidos es " + sumpar + " y la suma de los numeros en posicion impar introducidos es " + sumimp);
+	}
+		
+}

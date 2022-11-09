@@ -1,0 +1,15 @@
+package pruebaseclipse;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		for (int hola=2; hola<9; hola++) {
+			System.out.print(hola);
+		}
+
+
+	}
+
+}

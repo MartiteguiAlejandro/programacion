@@ -1,0 +1,70 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String codigo;
+		
+		char primer;
+		char segundo;
+		char tercero;
+		char cuarto;
+		char genero;
+		char curso;
+		int hprimero=0;
+		int hsegundo=0;
+		int mprimero=0;
+		int msegundo=0;
+		int contcodigos=0;
+		
+		do {
+			System.out.println("Introduzca un codigo: ");
+			codigo=teclado.nextLine();
+			primer=codigo.charAt(0);
+			if(primer==1) {
+				segundo=codigo.charAt(1);
+				if(segundo==9) {
+					tercero=codigo.charAt(2);
+					if(tercero==9) {
+						cuarto=codigo.charAt(3);
+						if(cuarto>=0 && cuarto<=5) {
+							genero=codigo.charAt(4);
+							if(genero=='H' || genero=='M' ){
+								curso=codigo.charAt(5);
+								if(curso==1) {
+									if(curso=='H') {
+										hprimero++;
+									}else if(curso=='M') {
+										mprimero++;
+									}
+								}else if(curso==2) {
+									if(curso=='H') {
+										hsegundo++;
+									}else if(curso=='M') {
+										msegundo++;
+									
+								} else {
+									System.out.print("El curso debe ser 1 o 2");
+								}
+							}
+							
+					
+						}
+						
+					}else {
+						System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+					}
+				}else {
+					System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+				}
+			}else {
+				System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+			}
+			
+		}
+			contcodigos++;
+		}while(!codigo.equals("00000000"));
+		System.out.print("Hay " + hprimero + " hombres en primero, " + hsegundo + " hombres en segundo, " + mprimero + " mujeres en primero y"+ msegundo + " mujeres en segundo. Se han registrado" + contcodigos + " codigos.");
+	}	
+}

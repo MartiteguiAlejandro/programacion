@@ -1,0 +1,85 @@
+
+
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String codigo;
+		
+		char primer;
+		int primer2;
+		char segundo;
+		int segundo2;
+		char tercero;
+		int tercero2;
+		char cuarto;
+		int cuarto2;
+		char genero;
+		int genero2;
+		char curso;
+		int curso2;
+		int hprimero=0;
+		int hsegundo=0;
+		int mprimero=0;
+		int msegundo=0;
+		int contcodigos=0;
+		
+		do {
+			System.out.println("Introduzca un codigo: ");
+			codigo=teclado.nextLine();
+			primer=codigo.charAt(0);
+			primer2=primer;
+			if(primer==49) {
+				segundo=codigo.charAt(1);
+				segundo2=segundo;
+				if(segundo==57) {
+					tercero=codigo.charAt(2);
+					tercero2=tercero;
+					if(tercero==57) {
+						cuarto=codigo.charAt(3);
+						cuarto2=cuarto;
+						if(cuarto>=48 && cuarto<=53) {
+							genero=codigo.charAt(4);
+							genero2=genero;
+							if(genero==72 || genero==77){
+								curso=codigo.charAt(5);
+								curso2=curso;
+								if(curso==49) {
+									if(curso==72) {
+										hprimero++;
+									}else if(curso==77) {
+										mprimero++;
+									}
+								}else if(curso==50) {
+									if(curso==72) {
+										hsegundo++;
+									}else if(curso==77) {
+										msegundo++;
+									
+								} else {
+									System.out.print("El curso debe ser 1 o 2");
+								}
+							}
+							
+					
+						}
+						
+					}else {
+						System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+					}
+				}else {
+					System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+				}
+			}else {
+				System.out.println("Los 4 primeros caracters deben estar entre 1990 y 1995");
+			}
+			
+		}
+			contcodigos++;
+		}while(!codigo.equals("00000000"));
+		System.out.print("Hay " + hprimero + " hombres en primero, " + hsegundo + " hombres en segundo, " + mprimero + " mujeres en primero y "+ msegundo + " mujeres en segundo. Se han registrado" + (contcodigos-1) + " codigos.");
+	}	
+}
+

@@ -1,0 +1,34 @@
+package pruebaseclipse;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner (System.in);
+        int num;
+        int mayor=0;
+        int menor=0;
+        double contador=-1;
+        double total=0;
+        do {
+            System.out.print("Ingresa un numero: ");
+            num=teclado.nextInt();
+            if(mayor<num){
+                mayor=num;
+                if(menor==0){
+                    menor=mayor;
+                }
+            }
+            if(menor>num && num!=0){
+                menor=num;
+            }
+            total=total+num;
+            contador++;
+        }
+        while (num!=0);
+        double media=total/contador;
+        System.out.print("La media de es de " + media + " ,el numero mayor es " + mayor + " y el numero menor es " + menor);
+	}
+		
+}

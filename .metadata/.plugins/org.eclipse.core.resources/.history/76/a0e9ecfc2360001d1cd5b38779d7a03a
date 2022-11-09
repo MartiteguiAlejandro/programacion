@@ -1,0 +1,24 @@
+package pruebaseclipse;
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner teclado=new Scanner(System.in);
+		String frase,letra,caract,frase2="";
+		int cont=0;
+		System.out.println("Introduzca un codigo: ");
+		frase=teclado.nextLine();
+		System.out.println("Introduzca una letra: ");
+		letra=teclado.nextLine();
+		for(int i=0;i<frase.length();i++) {
+			caract=frase.substring(i,i+1);
+			if(caract.equals(letra) && cont>=3) {
+				caract=caract.toUpperCase();
+				cont++;
+			}
+			frase2+=caract;
+		}
+		System.out.println(frase2);
+	}	
+}
+
